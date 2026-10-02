@@ -1,0 +1,24 @@
+[package]
+name = "mollusk"
+version = "0.1.0"
+edition = "2021"
+license-file = "LICENSE"
+publish = false
+
+[dependencies]
+solana-program = { version = "=4.0.0", features = ["borsh"], default-features = false }
+solana-account = "=4.3.2"
+solana-bincode = "=3.1.0"
+solana-sdk-ids = "=3.1.0"
+solana-system-interface = { version = "2.0.0", features = ["bincode"] }
+solana-loader-v3-interface = { version = "=6.1.0", features = ["serde"] }
+solana-svm-log-collector = "=4.2.1"
+
+mollusk-svm = "=0.15.0"
+mollusk-svm-result = "=0.15.0"
+
+thiserror = "1.0"
+
+[lib]
+name = "mollusk"
+path = "src/lib.rs"
